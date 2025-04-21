@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/member.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <title>Member</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="flex">
+                <div class="down flex1">
+                    <ul>
+                        <li>
+                            <a href="product.html">商品瀏覽</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="down flex1">
+                    <ul>
+                        <li>
+                            <a href="cart.html">購物車</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex1">
+                    <a href="index.html" class="logoA">
+                        <div class="logoBox">
+                            <div class="logo1">
+                                <img src="assets/img/logo.png" class="logo">
+                            </div>
+                            <div class="logo2">
+                                <img src="assets/img/logo2.png" class="logo">
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="down flex1">
+                    <ul>
+                        <li class="down">
+                            <a href="#">會員資訊</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="down flex1">
+                    <ul>
+                        <li class="down">
+                            <li class="loginLi" onclick="document.getElementById('login').style.display='block'">登入/註冊</li>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" required>
+                        <span class="line"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="login" class="login">
+            <div class="container" id="container">
+                <div class="formCon signUp">
+                    <form action="#">
+                        <div class="makemember">
+                            <h1>建立帳戶</h1>
+                            <input type="text" placeholder="姓名" />
+                            <input type="date" placeholder="生日" />
+                            <input type="text" placeholder="電話" />
+                            <input type="email" placeholder="Email" required/>
+                            <input type="password" placeholder="密碼" required/>
+                        </div>
+                        <button>註冊</button>
+                    </form>
+                </div>
+                <div class="formCon signIn">
+                    <form action="#">
+                        <h1>登入</h1>
+                        <div class="loginword">
+                            <div class="logintxt1"><p>H</p></div>
+                            <div class="logintxt1"><p>e</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>o &nbsp </p></div>
+                            <div class="logintxt1"><p>W</p></div>
+                            <div class="logintxt1"><p>o</p></div>
+                            <div class="logintxt1"><p>r</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>d</p></div>
+                        </div>    
+                            <h3>welcome back</h3>
+
+                        <div class="makemember">
+                            <input type="email" placeholder="Email" required/>
+                            <input type="password" placeholder="密碼" required/>
+                        </div>
+                        <button>登入</button>
+                    </form>
+                </div>
+                <div class="coverCon">
+                    <div class="cover">
+                        <div class="coverpage coverIn">
+                            <img  data-anijs="if: mouseover, do: tada animated" src="assets/img/loginJam.png" id="signIn" class="inpic">
+                        </div>
+                        <div class="coverpage coverUp">
+                            <img  data-anijs="if: mouseover, do: tada animated" src="assets/img/loginJam.png" id="signUp" class="uppic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/Javascript/login.js"></script>
+    </header>
+
+    <main>
+        
+        <section class="all">
+            <input id="1" type="radio" name="choice" checked="checked" class="noIn"/>
+            <label for="1"><img src="assets/img/member.png" alt="member" class="bear"></label>
+            <div class="memContent">
+                <div class="all">
+                    <div class="profilePic">
+                        <canvas id="canvas">
+                            <img src="assets/img/sundi4.png" id="imageId" style="display: none;">
+                        </canvas>
+                        <script src="assets/Javascript/pic.js"></script>
+                    </div>
+                    <div class="profile" id="profile">
+                        <div class="words">
+                            <p>姓名：&nbsp; <span id="name">林阿水</span></p>
+                            <p>生日：&nbsp; <span id="birth">2002 / 02 / 26</span></p>
+                            <p>電話：&nbsp; <span id="phone">0939-159-628</span></p>
+                            <p>地址：&nbsp; <span id="address">桃園市中壢區弘揚路39號</span></p>
+                            <p>Email：&nbsp; <span id="email">Ashiulin226@gmail.com</span></p>
+                            <button onclick="toggleEditMode()">修改資料</button>
+                        </div>
+                    </div>
+                    <form class="editForm"  id="editForm">
+                        <div>
+                            <p>姓名：&nbsp;&nbsp;<input type="text" id="editName" class="editIn"></p>
+                            <p>生日：&nbsp;&nbsp;<input type="date" id="editBirth" class="editIn"></p>
+                            <p>電話：&nbsp;&nbsp;<input type="text" id="editPhone" class="editIn"></p>
+                            <p>地址：&nbsp;&nbsp;<input type="text" id="editAddress" class="editIn"></p>
+                            <p>Email：&nbsp;&nbsp;<input type="email" id="editEmail" class="editIn"></p>
+                            <button onclick="saveChanges(event)">儲存修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <script src="assets/Javascript/member.js"></script>
+            
+            <input id="2" type="radio" name="choice" class="noIn"/>
+            <label for="2"><img src="assets/img/shopbag.png" alt="buy" class="bear"></label>
+            <div class="memContent">
+                <div class="buyBox">
+                    <table class="buytable">
+                        <tr>
+                            <th>購買日期</th>
+                            <th>產品名稱</th>
+                            <th>購買數量</th>
+                            <th>小計</th>
+                        </tr>
+                        <tr>
+                            <td>2023-03-23</td>	
+                            <td>愛文芒果果乾</td>
+                            <td>3</td>
+                            <td>NT. 540</td>
+                        </tr>
+                        <tr>
+                            <td>2023-03-23</td>	
+                            <td>香濃巧克力抹醬</td>
+                            <td>2</td>
+                            <td>NT. 400</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-23</td>	
+                            <td>綜合堅果禮盒</td>
+                            <td>1</td>
+                            <td>NT. 480</td>
+                        </tr>
+                        <tr>
+                            <td>2024-03-23</td>	
+                            <td>酸甜百香蘋果醬</td>
+                            <td>4</td>
+                            <td>NT. 720</td>
+                        </tr>
+                        <tr>
+                            <td>2024-04-18</td>	
+                            <td>乾燥洛神花乾</td>
+                            <td>2</td>
+                            <td>NT. 210</td>
+                        </tr>
+                        <tr>
+                            <td>2024-04-18</td>	
+                            <td>頂級無調味核桃</td>
+                            <td>1</td>
+                            <td>NT. 240</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        
+            <input id="3" type="radio" name="choice" class="noIn"/>
+            <label for="3"><img src="assets/img/comment.png" alt="comment" class="bear"></label>
+            <div class="memContent">
+                <div class="ccBox">
+                    <div class="commentBox">
+                        <div class="box">
+                            <div class="comment">
+                                <div class="words">
+                                    <p class="one">超濃巧克力醬</p>
+                                    <p class="two">抹吐司超級好吃，好吃一直吃</p>
+                                    <p class="three">三天前</p>
+                                </div>
+                                <div class="star">
+                                    <p class="four">★★★★☆</p>
+                                    <p class="point">（4/5）</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="comment">
+                                <div class="words">
+                                    <p class="one">芒～果乾</p>
+                                    <p class="two">很香很ㄕㄨㄚˋ嘴，整個停步下來，但有點甜</p>
+                                    <p class="three">一週前</p>
+                                </div>
+                                <div class="star">
+                                    <p class="four">★★★☆☆</p>
+                                    <p class="point">（3/5）</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="boxlast">
+                            <div class="comment">
+                                <div class="words">
+                                    <p class="one">開心堅果禮盒</p>
+                                    <p class="two">買來送人的，應該不錯吧！！</p>
+                                    <p class="three">一月前</p>
+                                </div>
+                                <div class="star">
+                                    <p class="four">★★★★★</p>
+                                    <p class="point">（5/5）</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactBox">
+                        <a class="contactmes" href="javascript:void(0);" onclick="openForm()">
+                            <div class="mes">
+                                <p>有任何建議？</p>
+                                <p>
+                                    歡迎留言，感謝您的指教
+                                </p>
+                            </div>
+                        </a>
+                        <!-- 隱藏 -->
+                        <div id="hiddenForm" style="display:none;">
+                            <form class="mesForm">
+                                <textarea class="mesarea" name="content" rows="10" placeholder="我認為……"></textarea><br>
+                                <input class="mesIn" type="submit" value="送出" />
+                            </form>
+                            <div class="mesWord">
+                                ※客服時間：Mon.-Fri 09:00-18:00(中午休息時間12:00-13:00)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <div class="left">
+                <p><span class="title">聯絡資訊</span></p>
+                <p><span class="content">信箱：<a href="mailto:sundi224@gmail.com" style="color: white;">sundi224@gmail.com</a></span></p>
+                <p><span class="title">營業時間</span></p>
+                <p><span class="content">Mon.-Fri. 09:00 ~ 12:00 / 13:00 ~ 18:00</span></p>
+            </div>
+            <div class="right">
+                <ul class="rr">
+                    <li><a href="we.html">關於我們</a></li>
+                    <li><a href="merchantlogin.html">賣家中心</a></li>
+                </ul>
+                <ul class="rl">
+                    <li><a href="service.html">服務條款</a></li>
+                    <li><a href="know.html">購買須知</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-bottom: 10px; margin: 0;">
+            <span class="title">Copyright © 2024 Sundi</span>
+        </div>
+    </footer>
+    <div class="goUp" id="goUp">
+        <a href="#" class="gotop"><img src="assets/img/arrow-up.png" class="top"></a>
+    </div>
+    <script src="assets/Javascript/index.js"></script>
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+    <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
+</body>
+</html>

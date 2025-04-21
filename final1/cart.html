@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="icon" href="assets/img/member.png" type="image/x-icon" />
+    <title>Cart</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- rwd選單meun -->
+            <div class="menu" id="menu">
+                <label class="label16">
+                    <input class="inp16" type="checkbox">
+                    <span class="line16"></span>
+                    <span class="line16"></span>
+                    <span class="line16"></span>
+                </label>
+                <ul class="menu-choice">
+                    <div class="search" style="margin-left: 0px;">
+                        <label>
+                            <input type="text" required>
+                            <span class="line"></span>
+                        </label>
+                    </div>
+                    <li><a href="product.html">商品瀏覽</a></li>
+                    <li><a href="cart.html">購物車</a></li>
+                    <li><a href="member.html">會員資訊</a></li>
+                    <li><a href="we.html">關於我們</a></li>
+                    <li><a href="merchantlogin.html">賣家中心</a></li>
+                    <li><a href="service.html">服務條款</a></li>
+                    <li><a href="know.html">購買須知</a></li>
+                </ul>
+            </div>
+            <!-- -->
+            <div class="flex">
+                <div class="down flex1 nav-hide">
+                    <ul>
+                        <li>
+                            <a href="product.html">商品瀏覽</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="down flex1 nav-hide">
+                    <ul>
+                        <li>
+                            <a href="cart.html">購物車</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex1">
+                    <div class="logoA">
+                        <div class="logoBox">
+                            <div class="logo1">
+                                <a href="index.html"><img src="assets/img/logo.png" class="logo"></a>
+                            </div>
+                            <div class="logo2">
+                                <a href="index.html"><img src="assets/img/logo2.png" class="logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="down flex1 nav-hide">
+                    <ul>
+                        <li class="down">
+                            <a href="member.html">會員資訊</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="down flex1">
+                    <ul>
+                        <li class="loginLi" onclick="document.getElementById('login').style.display='block'">登入/註冊</li>
+                    </ul>
+                </div>
+                <div class="search nav-hide">
+                    <label>
+                        <input type="text" required>
+                        <span class="line"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="login" class="login">
+            <div class="container" id="container">
+                <div class="formCon signUp">
+                    <div class="from-title" id="log-in">
+                        <img src="assets/img/transfer-data.png" class="transferImg" alt="transfer">
+                        <p>登入</p>
+                    </div>
+                    <form action="#" id="signupForm" onsubmit="signupForm(event)">
+                        <div class="makemember">
+                            <h1>建立帳戶</h1>
+                            <input type="text" id="username" placeholder="姓名"/>
+                            <input type="date" id="birthday" placeholder="生日"/>
+                            <input type="text" id="phone" placeholder="電話"/>
+                            <input type="email" id="email" placeholder="Email" required/>
+                            <input type="password" id="password" placeholder="密碼" required/>
+                            <input type="password" id="comfirm_password" placeholder="確認密碼" required/>
+                        </div>
+                        <button type="submit">註冊</button>
+                    </form>
+                </div>
+                <div class="formCon signIn">
+                    <div class="from-title" id="register">
+                        <img src="assets/img/transfer-data.png" class="transferImg" alt="transfer">
+                        <p>註冊</p>
+                    </div>
+                    <form  action="#" id="loginForm" onsubmit="loginForm(event)">
+                        <h1>登入</h1>
+                        <div class="loginword">
+                            <div class="logintxt1"><p>H</p></div>
+                            <div class="logintxt1"><p>e</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>o &nbsp </p></div>
+                            <div class="logintxt1"><p>W</p></div>
+                            <div class="logintxt1"><p>o</p></div>
+                            <div class="logintxt1"><p>r</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>d</p></div>
+                        </div>    
+                            <h3>welcome back</h3>
+  
+                        <div class="makemember">
+                            <input type="email" id="loginemail" placeholder="Email" required/>
+                            <input type="password" id="loginpassword" placeholder="密碼" required/>
+                        </div>
+                        <button type="submit">登入</button>
+                    </form>
+                </div>
+                <div class="coverCon">
+                    <div class="cover">
+                        <div class="coverpage coverIn">
+                            <img  data-anijs="if: mouseover, do: tada animated" src="assets/img/loginJam.png" id="signIn" class="inpic">
+                        </div>
+                        <div class="coverpage coverUp">
+                            <img  data-anijs="if: mouseover, do: tada animated" src="assets/img/loginJam.png" id="signUp" class="uppic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/Javascript/login.js"></script>
+    </header>
+
+    <main>
+        <section class="all">
+            <div class="cartleft">
+                <div class="cartTitle">
+                    <img src="assets/img/shopping-cart.png" alt="購物車">
+                    <p>購物車</p>
+                </div>
+                <div class="productContainer">
+                    <div class="pro">
+                        <img  class="itemImg" src="assets/img/mango4.jpg" alt="">
+                        <div class="itemInfo">
+                            <div class="up">
+                                <p class="proName">愛文芒果乾</p>
+                                <img src="assets/img/x-mark.png" alt="刪除" class="deleteButton">
+                            </div>
+                            <div class="down">
+                                <div class="counter">
+                                    <span class="proNum">數量</span>
+                                    <select class="quantitySelect">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option selected>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                                <div class="money">
+                                    <span class="word">小計</span>
+                                    <span class="num">NT. 540</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img  class="itemImg" src="assets/img/choco4.jpg" alt="巧克力抹醬">
+                        <div class="itemInfo">
+                            <div class="up">
+                                <p class="proName">香濃巧克力抹醬</p>
+                                <img src="assets/img/x-mark.png" alt="刪除" class="deleteButton">
+                            </div>
+                            <div class="down">
+                                <div class="counter">
+                                    <span class="proNum">數量</span>
+                                    <select class="quantitySelect">
+                                        <option>1</option>
+                                        <option selected>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                                <div class="money">
+                                    <span class="word">小計</span>
+                                    <span class="num">NT. 400</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img  class="itemImg" src="assets/img/nutbox1.jpg" alt="">
+                        <div class="itemInfo">
+                            <div class="up">
+                                <p class="proName">綜合堅果禮盒</p>
+                                <img src="assets/img/x-mark.png" alt="刪除" class="deleteButton">
+                            </div>
+                            <div class="down">
+                                <div class="counter">
+                                    <span class="proNum">數量</span>
+                                    <select class="quantitySelect">
+                                        <option selected>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                                <div class="money">
+                                    <span class="word">小計</span>
+                                    <span class="num">NT. 480</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pro">
+                        <img  class="itemImg" src="assets/img/apple4.jpg" alt="">
+                        <div class="itemInfo">
+                            <div class="up">
+                                <p class="proName">酸甜百香蘋果醬</p>
+                                <img src="assets/img/x-mark.png" alt="刪除" class="deleteButton">
+                            </div>
+                            <div class="down">
+                                <div class="counter">
+                                    <span class="proNum">數量</span>
+                                    <select class="quantitySelect">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option selected>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                                <div class="money">
+                                    <span class="word">小計</span>
+                                    <span class="num">NT. 720</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cartright">
+                <div class="step">
+                    <span>STEP</span>
+                    <div id="stepNumber" class="num">1</div>
+                    <span>/ 3</span>
+                </div>
+                <div class="checkInfo">
+                    <span class="InfoTitle">會員資訊</span>
+                    <p>收件人姓名：
+                        <input type="text" value="林阿水">
+                    </p>
+                    <p>電話：
+                        <input type="text" value="0939-159-628">
+                    </p>
+                    <p>地址：
+                        <input type="text" value="桃園市中壢區弘揚路39號">
+                    </p>
+                    <div class="ship">
+                        <span class="InfoTitle">取貨方式</span>
+                        <div class="mutilchoice">
+                            <div class="choice">
+                                <input type="radio" name="ship" id="ship1" checked>
+                                <label for="ship1">7-11超商取貨</label>
+                            </div>
+                            <div class="choice">
+                                <input type="radio" name="ship" id="ship2">
+                                <label for="ship2">全家超商取貨</label>
+                            </div>
+                            <div class="choice">
+                                <input type="radio" name="ship" id="ship3">
+                                <label for="ship3">宅配到府</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkPay">
+                    <span class="Title">付款方式</span>
+                    <div class="choFir">
+                        <div class="cho">
+                            <input type="radio" name="pay" id="pay1" checked>
+                            <label for="pay1">信用卡線上刷卡</label>
+                        </div>
+                    </div>
+                    <div class="cho">
+                        <input type="radio" name="pay" id="pay2">
+                        <label for="pay2">貨到付款（超商）</label>
+                    </div>
+                    <div class="cho">
+                        <input type="radio" name="pay" id="pay3">
+                        <label for="pay3">貨到付款（宅配）</label>
+                    </div>
+                    <div class="cho">
+                        <input type="radio" name="pay" id="pay4">
+                        <label for="pay4">超商代碼繳費</label>
+                    </div>
+                    <div class="choLas">
+                        <div class="cho">
+                            <input type="radio" name="pay" id="pay5">
+                            <label for="pay5">銀聯卡</label>
+                        </div>
+                    </div>
+                    <span class="Title">優惠券代碼</span>
+                    <div class="choFL">
+                        <div class="cho">
+                            <input type="radio" name="coupon" id="coupon">
+                            <label for="coupon"><input type="text" class="coupon" value="請輸入優惠券代碼" onfocus="clearPlaceholder(this)"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="checkAll">
+                    <div class="checkUp">
+                        <span class="Title">確認結帳資訊</span>
+                        <span class="TotalPrice">NT. 2140</span>
+                    </div>
+                    <ul class="area">
+                        <li class="subtitle">收件人資料</li>
+                        <ul class="subArea">
+                            <li>姓名：林阿水</li>
+                            <li>電話：0939-159-628</li>
+                            <li>地址：桃園市中壢區弘揚路39號</li>
+                        </ul>
+                    </ul>
+                    <ul class="area">
+                        <li class="subtitle">取貨方式</li>
+                        <ul class="subArea">
+                            <li>7-11超商取貨</li>
+                        </ul>
+                    </ul>
+                    <ul class="area">
+                        <li class="subtitle">付款方式</li>
+                        <ul class="subArea">
+                            <li>信用卡線上刷卡</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="buttonContainer">
+                    <button id="prevButton" >上一步</button>
+                    <button id="nextButton"  data-url="member.html">下一步</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <div class="left">
+                <p><span class="title">聯絡資訊</span></p>
+                <p><span class="content">信箱：<a href="mailto:sundi224@gmail.com" style="color: white;">sundi224@gmail.com</a></span></p>
+                <p><span class="title">營業時間</span></p>
+                <p><span class="content">Mon.-Fri. 09:00 ~ 12:00 / 13:00 ~ 18:00</span></p>
+            </div>
+            <div class="right">
+                <ul class="rr">
+                    <li><a href="we.html">關於我們</a></li>
+                    <li><a href="merchantlogin.html">賣家中心</a></li>
+                </ul>
+                <ul class="rl">
+                    <li><a href="service.html">服務條款</a></li>
+                    <li><a href="know.html">購買須知</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-bottom: 10px; margin: 0;" class="footer2">
+            <span class="title">Copyright © 2024 Sundi</span>
+        </div>
+        <!-- rwd footer -->
+        <div class="footer-min">
+            <div style="text-align: center; padding-bottom: 10px; margin: 0;">
+                <p><span class="title">聯絡資訊</span></p>
+                <p><span class="content">信箱：<a href="mailto:sundi224@gmail.com" style="color: white;">sundi224@gmail.com</a></span></p>
+                <p><span class="title">營業時間</span></p>
+                <p><span class="content">Mon.-Fri. 09:00 ~ 12:00 / 13:00 ~ 18:00</span></p>
+                <span class="title">Copyright © 2024 Sundi</span>
+            </div>
+        </div>
+        <!--  -->
+    </footer>
+    <div class="goUp" id="goUp">
+        <a href="#" class="gotop"><img src="assets/img/arrow-up.png" class="top"></a>
+    </div>
+    <script>
+        const goUpButton = document.getElementById('goUp');
+        console.log("Script is running!"); 
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > window.innerHeight * 0.05) {
+                goUpButton.style.display = 'block';
+            } else {
+                goUpButton.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="assets/Javascript/cart.js"></script>
+    <script src="assets/Javascript/style.js"></script>
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+    <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
+</body>
+</html>

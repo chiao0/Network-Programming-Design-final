@@ -1,0 +1,124 @@
+.card{
+    display: flex;
+}
+main{
+    padding-top: 70px;
+    height: 750px;
+}
+.left_pro{
+    margin-left: 200px;
+    padding-top: 100px;
+    width: 10%;
+}
+.right_pro{
+    width: 70%;
+    text-align: center;
+}
+.clearfix {
+    clear: both;
+}
+
+
+/* 標籤 */
+.tab {
+    overflow: hidden;
+}
+
+.tab button {
+    display: block;
+    width: 100%; 
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center; 
+    color: black;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    
+}
+
+.tab button:hover {
+    background: linear-gradient(to right, #FFE29F 0%, #FFA99F 100%);
+    transform: scale(1.2);
+    color: white;
+}
+
+.tab button.active {
+    color:rgb(0, 0, 0);
+    background: linear-gradient(to right, rgb(255, 226, 159, 0.5) 0%, rgb(255, 169, 159, 0.5) 100%);
+}
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+.tabcontent.active {
+    display: block;
+}
+.box{
+    border-bottom: 3px dotted black;
+}
+
+/* 產品陳列 */
+.pro_flex{
+    display: flex;
+    justify-content: center;
+}
+.pro_boxout{
+    padding: 0px 35px 30px 35px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+    position: relative;
+}
+.pro_boxout:hover{
+    transform: scale(1.1);
+}
+/* 星星隱藏顯示 */
+.pro_boxout:hover .stars {
+    opacity: 1;
+    visibility: visible; 
+}
+a.pro_boxout {
+    display: block;
+    text-decoration: none; 
+    color: inherit; 
+}
+.pro_box{
+    height: 300px;
+    width: 200px;
+    /* background-color: #ffffff; */
+}
+.pro_boxin{
+    padding: 20px;
+}
+.pro_img{
+    height: 150px;
+    width: 150px;
+}
+.pro{
+    padding-top: 5px;
+    text-align:center ;
+    font-size: 20px;
+}
+.price{
+    text-align: center;
+    font-size: 15px;
+}
+.stars {
+    text-align: center; 
+    padding-top: 3px;
+    /* 星星隱藏顯示 */
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.5s ease-in-out;
+}
+.star{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}

@@ -1,0 +1,129 @@
+body {
+    background: rgb(65, 65, 65);
+    /* background: linear-gradient(to right, #FFE29F 0%, #ffd5d0 100%); */
+    padding: 45px 35px;
+    margin: 40px 30px;
+    /* border: 30px double #fdc9a7; */
+    border: 12px double #FFE29F;
+    outline: solid 8px rgb(255, 255, 255);
+}
+
+main{
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* 熊熊插圖 */
+.bear {
+    position: absolute;
+    left: 450px;
+    height:auto;
+    width:6%;
+    transform:rotate(-10deg);
+    bottom: 85%;
+    z-index: 2;
+}
+
+.bear6 {
+    position: absolute;
+    bottom: -25px;
+    right: 420px;
+    height:auto;
+    width:8%;
+    transform:rotate(10deg);
+    z-index: 2;
+}
+
+/* 登入介面 */
+.merlogcon {
+    background-color: #ffffff;
+    width: 420px;
+    height: 350px;
+    position: relative;
+    border-radius: 10px;
+    left: 50%;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    transform: translateX(-50%);
+}
+
+.merlogcon p {
+    font-size: 22px;
+    font-weight: bold;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.merlog input {
+    width: 300px;
+    height: 40px;
+    border: none;
+    outline-style: none;
+    font-size: 16px;
+    color: #333333;
+    padding: 0 28px;
+    margin: 15px 30px;
+    border-radius: 28px;
+    background: #ececec;
+    box-shadow: 6px 6px 12px #b5b5b5, -6px -6px 12px #ffffff, inset 0 0 0 #b8b8b8, inset 0 0 0 #ffffff;
+    transition: all .24s ease-in-out;
+}
+
+.merlog input:focus {
+    box-shadow: 0 0 0 #b5b5b5, 0 0 0 #fcf8f8, inset 6px 6px 12px #b8b8b8, inset -6px -6px 12px #ffffff;
+}
+
+.merlog input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    font-weight: 700;
+    transition: all .24s ease-in-out;
+}
+
+.merlog input:focus::placeholder {
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.setbutton {
+    position: relative;
+    left: 50%;
+    transform: translateX(-25%);
+}
+
+button {
+    border-radius: 25px;
+    border: 1px solid #ebe7e4;
+    background-color: #e7dfd8;
+    color: #1b1f45;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 18px;
+}
+
+button:hover{
+    border-radius: 25px;
+    background-color: #a6917e;
+    color: #1b1f45;
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 3px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    margin-top: 18px;
+    cursor: pointer;
+}
+
+.setbutton a{
+    text-decoration: none;
+    color: #1b1f45;
+}
+
+.setbutton a:visited{
+    text-decoration: none;
+    color: #1b1f45;
+}

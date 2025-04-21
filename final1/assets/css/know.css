@@ -1,0 +1,29 @@
+section {
+    background-color: white;
+    width: 80%;
+    margin: 100px auto 20px auto;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='38' ry='38' stroke='black' stroke-width='6' stroke-dasharray='6%2c 14' stroke-dashoffset='43' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 38px;
+}
+
+.all {
+    padding: 3px 10px 15px 30px;
+}
+
+.know {
+    /* padding-top: 10px; */
+    text-align: center;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.contxt {
+    font-size: 20px;
+    font-weight: 530;
+    line-height: 40px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bolder;
+}

@@ -1,0 +1,249 @@
+/* 內固定大模板 */
+section{
+    display: flex;
+    width: 70%;
+    margin: 80px auto 60px auto;
+    padding: 20px;
+    /* 邊框樣式 */
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='38' ry='38' stroke='black' stroke-width='6' stroke-dasharray='6%2c 14' stroke-dashoffset='43' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 38px;
+}
+main{
+    margin: 0px;
+    padding: 60px 0px 0px 0px;
+}
+.all{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    border-radius: 38px;
+}
+/* 左邊購物車title */
+.cartTitle{
+    display: flex;
+}
+.cartTitle img{
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+}
+/* 左 */
+.cartleft{
+    flex: 1;
+    padding-right: 20px;
+    border-right: 1px solid lightgray;
+}
+.productContainer{
+    max-height: 500px;
+    overflow: auto;
+}
+/* pro部分 */
+.pro{
+    display: flex;
+    padding: 20px 0;
+    border-bottom: 1px solid lightgray;
+}
+.itemImg{
+    width: 150px;
+    height: 130px;
+}
+.itemInfo{
+    height: 130px;
+}
+.up{
+    display: flex;
+    justify-content: space-between;
+}
+.proName{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px 20px 80px 10px;
+}
+.up img{
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+}
+.down{
+    display: flex;
+    justify-content: space-between;
+}
+.counter{
+    border-bottom: 1px solid;
+    margin: 0px 100px 0px 10px;
+}
+.counter select{
+    border: none;
+}
+.money .word{
+    font-size: 10px;
+}
+.money .num{
+    font-size: 16px;
+}
+/* 右 */
+.cartright{
+    flex: 1;
+    padding: 10px 20px;
+    position: relative;
+}
+/* 步驟切換 */
+.step{
+    display: flex;
+    margin-bottom: 15px;
+}
+.step span{
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.step .num{
+    font-size: 30px;
+    font-weight: bold;
+}
+/* 標題 */
+.InfoTitle{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+    border-bottom: 1px solid black;
+}
+.checkInfo p{
+    margin: 20px 0px 20px 150px;
+}
+/* 選單 */
+.mutilchoice{
+    margin: 30px 0px 30px 150px;
+}
+.choice{
+    line-height: 5ch;
+}
+.choice input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #555;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.choice input:checked{
+    background-color: #555;
+}
+.choice label{
+    font-size: 18px;
+}
+/* 付款 */
+.checkPay .Title{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+    border-bottom: 1px solid black;
+}
+.cho{
+    line-height: 5ch;
+    margin-left: 140px;
+}
+.choFir{
+    margin-top: 20px;
+}
+.choLas{
+    margin-bottom: 10px;
+}
+.choFL{
+    margin: 20px 0px 40px;
+}
+.choFL .coupon{
+    width: 220px;
+    border: none;
+    border-bottom: 1px solid black; 
+    outline: none; 
+    font-size: 18px;
+    color: lightslategray;
+}
+.cho input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #555;
+    width: 20px;
+    height: 20px;
+    border-radius: 0;
+    outline: none;
+    transition: all 0.3s ease;
+}
+.cho input:checked{
+    background-color: #555;
+}
+.cho label{
+    font-size: 18px;
+}
+/* 最終確認資訊 */
+.checkAll{
+    margin-bottom: 18px;
+}
+.checkUp{
+    display: flex;
+    justify-content: space-between;
+}
+.checkAll .Title{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+    border-bottom: 1px solid black;
+}
+.checkAll .TotalPrice{
+    margin-left: 30px;
+    font-size: 20px;
+    font-weight: 800;
+    padding-top: 5px;
+    padding-bottom: 5px;   
+}
+.checkAll .area{
+    margin-top: 20px;
+    margin-left: 80px;
+    border-bottom: 1px lightgray solid;
+    padding-bottom: 5px;
+}
+.checkAll .subtitle{
+    list-style-type: square;
+    font-size: 18px;
+}
+.checkAll .subArea{
+    margin-top: 10px;
+    margin-left: 50px;
+    line-height: 4ch;
+}
+/* 按鈕樣式 */
+.buttonContainer {
+    display: flex;
+    justify-content: space-between; 
+}
+.buttonContainer button {
+    width: 100px;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    border-radius: 10px;
+    padding: 12px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.buttonContainer button:hover {
+    background-color: #555555;
+    color: white;
+}
+

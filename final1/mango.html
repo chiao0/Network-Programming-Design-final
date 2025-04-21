@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/mango.css">
+    <link rel="icon" href="assets/img/member.png" type="image/x-icon" />
+    <title>ProductPage</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- rwd選單meun -->
+            <div class="menu" id="menu">
+                <label class="label16">
+                    <input class="inp16" type="checkbox">
+                    <span class="line16"></span>
+                    <span class="line16"></span>
+                    <span class="line16"></span>
+                </label>
+                <ul class="menu-choice">
+                    <div class="search" style="margin-left: 0px;">
+                        <label>
+                            <input type="text" required>
+                            <span class="line"></span>
+                        </label>
+                    </div>
+                    <li><a href="product.html">商品瀏覽</a></li>
+                    <li><a href="cart.html">購物車</a></li>
+                    <li><a href="member.html">會員資訊</a></li>
+                    <li><a href="we.html">關於我們</a></li>
+                    <li><a href="merchantlogin.html">賣家中心</a></li>
+                    <li><a href="service.html">服務條款</a></li>
+                    <li><a href="know.html">購買須知</a></li>
+                </ul>
+            </div>
+            <!-- -->
+            <div class="flex">
+                <div class="down flex1 nav-hide">
+                    <ul>
+                        <li>
+                            <a href="product.html">商品瀏覽</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="down flex1 nav-hide">
+                    <ul>
+                        <li>
+                            <a href="cart.html">購物車</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex1">
+                    <div class="logoA">
+                        <div class="logoBox">
+                            <div class="logo1">
+                                <a href="index.html"><img src="assets/img/logo.png" class="logo"></a>
+                            </div>
+                            <div class="logo2">
+                                <a href="index.html"><img src="assets/img/logo2.png" class="logo"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="down flex1 nav-hide">
+                    <ul>
+                        <li class="down">
+                            <a href="member.html">會員資訊</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="down flex1">
+                    <ul>
+                        <li class="loginLi" onclick="document.getElementById('login').style.display='block'">登入/註冊</li>
+                    </ul>
+                </div>
+                <div class="search nav-hide">
+                    <label>
+                        <input type="text" required>
+                        <span class="line"></span>
+                    </label>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="login" class="login">
+            <div class="container" id="container">
+                <div class="formCon signUp">
+                    <div class="from-title" id="log-in">
+                        <img src="assets/img/transfer-data.png" class="transferImg" alt="transfer">
+                        <p>登入</p>
+                    </div>
+                    <form action="#" id="signupForm" onsubmit="signupForm(event)">
+                        <div class="makemember">
+                            <h1>建立帳戶</h1>
+                            <input type="text" id="username" placeholder="姓名"/>
+                            <input type="date" id="birthday" placeholder="生日"/>
+                            <input type="text" id="phone" placeholder="電話"/>
+                            <input type="email" id="email" placeholder="Email" required/>
+                            <input type="password" id="password" placeholder="密碼" required/>
+                            <input type="password" id="comfirm_password" placeholder="確認密碼" required/>
+                        </div>
+                        <button type="submit">註冊</button>
+                    </form>
+                </div>
+                <div class="formCon signIn">
+                    <div class="from-title" id="register">
+                        <img src="assets/img/transfer-data.png" class="transferImg" alt="transfer">
+                        <p>註冊</p>
+                    </div>
+                    <form  action="#" id="loginForm" onsubmit="loginForm(event)">
+                        <h1>登入</h1>
+                        <div class="loginword">
+                            <div class="logintxt1"><p>H</p></div>
+                            <div class="logintxt1"><p>e</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>o &nbsp </p></div>
+                            <div class="logintxt1"><p>W</p></div>
+                            <div class="logintxt1"><p>o</p></div>
+                            <div class="logintxt1"><p>r</p></div>
+                            <div class="logintxt1"><p>l</p></div>
+                            <div class="logintxt1"><p>d</p></div>
+                        </div>    
+                            <h3>welcome back</h3>
+  
+                        <div class="makemember">
+                            <input type="email" id="loginemail" placeholder="Email" required/>
+                            <input type="password" id="loginpassword" placeholder="密碼" required/>
+                        </div>
+                        <button type="submit">登入</button>
+                    </form>
+                </div>
+                <div class="coverCon">
+                    <div class="cover">
+                        <div class="coverpage coverIn">
+                            <img  data-anijs="if: mouseover, do: tada animated" src="assets/img/loginJam.png" id="signIn" class="inpic">
+                        </div>
+                        <div class="coverpage coverUp">
+                            <img  data-anijs="if: mouseover, do: tada animated" src="assets/img/loginJam.png" id="signUp" class="uppic">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="assets/Javascript/login.js"></script>
+    </header>
+
+    <main>
+        <div class="productPro">
+            <div class="productContainer">
+                <div class="thumbnails">
+                    <button id="upButton"><iconify-icon icon="icon-park-solid:up-one"  style="color: white"></iconify-icon></button>
+                    <div id="thumbnailContainer">
+                        <img src="assets/img/mango4.jpg" alt="商品1" class="thumbnail">
+                        <img src="assets/img/mango1.jpg" alt="商品2" class="thumbnail">
+                        <img src="assets/img/mango3.jpg" alt="商品3" class="thumbnail">
+                    </div>
+                    <button id="downButton"><iconify-icon icon="icon-park-solid:down-one"  style="color: white"></iconify-icon></button>
+                </div>
+                <div class="main-image">
+                    <img id="mainImage" src="https://i.pinimg.com/736x/24/bb/61/24bb61d269612eb6e0c0d8ff04b763c0.jpg" alt="大圖顯示商品">
+                </div>
+            </div>
+            <div class="productWord">
+                <p class="title">愛文芒果乾</p>
+                <div class="info">
+                    通過SGS檢驗合格，無添加色素、防腐劑 <br>本產品含有芒果，不適合其過敏體質者食用 <hr class="infoHr">
+                </div>
+                <div class="detail">
+                    <p class="money">NT. <span>180</span></p>
+                    <p class="stock">庫存數量：<span>33</span></p>
+                </div>
+                <form id="submit-form" method="POST" action="">
+                    <div class="add">
+                        <div class="up">
+                            <button type="button" class="upB minus" id="minus"><iconify-icon icon="icon-park:minus"></iconify-icon></button>
+                            <input class="upIn product-quantity" id="iquantity" name="quantity" type="text" value="1"/>
+                            <button type="button" class="upB add" id="plus"><iconify-icon icon="icon-park:plus"></iconify-icon></button>
+                        </div>
+                        <div class="downchoi">
+                            <button type="submit" class="dB submit-button"><iconify-icon icon="mdi-light:cart"></iconify-icon>&nbsp;加入購物車</button>  
+                            <button type="button" class="dB fav"><iconify-icon icon="ph:hand-heart"></iconify-icon>&nbsp;加入追蹤清單</button>   
+                        </div>
+                    </div>
+                </form>
+            </div>                  
+        </div>
+
+        <div class="productDescription">
+            <ul class="tabChange">
+                <li>
+                    <input type="radio" name="tab" id="product-description" class="tab-radio" checked>
+                    <label for="product-description">商品描述</label>
+                </li>
+                <li>
+                    <input type="radio" name="tab" id="product-reviews" class="tab-radio">
+                    <label for="product-reviews">評論紀錄</label>
+                </li>
+            </ul>
+        
+            <div id="product-description-content" class="tab-content active">
+                <p class="describeTitle">愛文芒果乾</p><hr class="colorful">
+                <p class="midDescribe">取自台灣在地的愛文芒果</p>
+                <p class="lastDescribe">
+                    來自日照充足的台灣南島，帶有風味出眾的濃郁香氣，醒目的深紅色外皮搭配亮麗的黃色果肉尤為特別，是款好吃又美麗的水果。我們以低溫烘烤製作，並且無添加任何色素、防腐劑，將來自南島的熱情以最自然的好滋味送到您口中。
+                </p>
+                <img src="assets/img/mango5.jpg" alt="底部大圖" class="describeImg">
+                <div class="more">
+                    <p class="describeTitle">推薦產品</p><hr class="colorful">
+                    <div class="moreImg">
+                        <div class="moreImgCon">
+                            <a href=""><img src="assets/img/lychee4.jpg" alt="pro1" class="image-front"></a>
+                            <a href=""><img src="assets/img/lychee.jpg" alt="pro1-back" class="image-back"></a>
+                            <p class="name">手工荔枝果醬</p>
+                            <p class="price">NT. 250</p>
+                        </div>
+                        <div class="moreImgCon">
+                            <a href=""><img src="assets/img/nutbox1.jpg" alt="pro2" class="image-front"></a>
+                            <a href=""><img src="assets/img/nutbox2.jpg" alt="pro1-back" class="image-back"></a>
+                            <p class="name">綜合堅果禮盒</p>
+                            <p class="price">NT. 480</p>
+                        </div>
+                        <div class="moreImgCon">
+                            <a href=""><img src="assets/img/choco4.jpg" alt="pro3" class="image-front"></a>
+                            <a href=""><img src="assets/img/choco.jpg" alt="pro1-back" class="image-back"></a>
+                            <p class="name">香濃巧克力抹醬</p>
+                            <p class="price">NT. 200</p>
+                        </div>
+                        <div class="moreImgCon">
+                            <a href=""><img src="assets/img/jambox3.jpg" alt="pro4" class="image-front"></a>
+                            <a href=""><img src="assets/img/jambox2.jpg" alt="pro1-back" class="image-back"></a>
+                            <p class="name">豐作雙果茶醬禮盒</p>
+                            <p class="price">NT. 760</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- rwd版本推薦商品 -->
+                <div class="slideshow-container">
+                    <p class="describeTitle">推薦產品</p>
+                    <hr class="colorful">
+                    <div class="insideSlide">
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <div class="mySlides">
+                            <div class="moreImgCon">
+                                <a href=""><img src="assets/img/lychee4.jpg" alt="pro1" class="image-front" style="width:100%"></a>
+                                <a href=""><img src="assets/img/lychee.jpg" alt="pro1-back" class="image-back" style="width:100%"></a>
+                                <p class="name">手工荔枝果醬</p>
+                                <p class="price">NT. 250</p>
+                            </div>
+                        </div>
+                        <div class="mySlides">
+                            <div class="moreImgCon">
+                                <a href=""><img src="assets/img/nutbox1.jpg" alt="pro2" class="image-front" style="width:100%"></a>
+                                <a href=""><img src="assets/img/nutbox2.jpg" alt="pro1-back" class="image-back" style="width:100%"></a>
+                                <p class="name">綜合堅果禮盒</p>
+                                <p class="price">NT. 480</p>
+                            </div>
+                        </div>
+                        <div class="mySlides">
+                            <div class="moreImgCon">
+                                <a href=""><img src="assets/img/choco4.jpg" alt="pro3" class="image-front" style="width:100%"></a>
+                                <a href=""><img src="assets/img/choco.jpg" alt="pro1-back" class="image-back" style="width:100%"></a>
+                                <p class="name">香濃巧克力抹醬</p>
+                                <p class="price">NT. 200</p>
+                            </div>
+                        </div>
+                        <div class="mySlides">
+                            <div class="moreImgCon">
+                                <a href=""><img src="assets/img/jambox3.jpg" alt="pro4" class="image-front" style="width:100%"></a>
+                                <a href=""><img src="assets/img/jambox2.jpg" alt="pro1-back" class="image-back" style="width:100%"></a>
+                                <p class="name">豐作雙果茶醬禮盒</p>
+                                <p class="price">NT. 760</p>
+                            </div>
+                        </div>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                    </div>
+                </div>
+                
+            </div>    
+            
+            <div id="product-reviews-content" class="tab-content hidden">
+                <div class="CommentBox">
+                    <p class="describeTitle">評論紀錄</p><hr class="colorful">
+                    <div class="showComment">
+                        <div class="showHead">
+                            <img src="assets/img/member.png" alt="memberImg" class="CommentHead">
+                        </div>
+                        <div class="words">
+                            <p class="one">芒～果乾</p>
+                            <p class="two">很香很ㄕㄨㄚˋ嘴，整個停步下來，但有點甜</p>
+                            <p class="three">一週前</p>
+                        </div>
+                        <div class="star">
+                            <p class="four">★★★☆☆</p>
+                            <div class="staralign">
+                                <p class="five">對您有幫助嗎?</p>
+                                <p class="check">✔</p>
+                                <p class="cross">X</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showComment">
+                        <div class="showHead">
+                            <img src="assets/img/member.png" alt="memberImg" class="CommentHead">
+                        </div>
+                        <div class="words">
+                            <p class="one">超級香甜芒果乾</p>
+                            <p class="two">吃得出來是很新鮮酸甜的芒果，螞蟻人的最愛！</p>
+                            <p class="three">三週前</p>
+                        </div>
+                        <div class="star">
+                            <p class="four">★★★★☆</p>
+                            <div class="staralign">
+                                <p class="five">對您有幫助嗎?</p>
+                                <p class="check">✔</p>
+                                <p class="cross">X</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showComment">
+                        <div class="showHead">
+                            <img src="assets/img/member.png" alt="memberImg" class="CommentHead">
+                        </div>
+                        <div class="words">
+                            <p class="one">愛文芒果做的芒果乾</p>
+                            <p class="two">有一種愛文芒果味</p>
+                            <p class="three">兩月前</p>
+                        </div>
+                        <div class="star">
+                            <p class="four">★★★★☆</p>
+                            <div class="staralign">
+                                <p class="five">對您有幫助嗎?</p>
+                                <p class="check">✔</p>
+                                <p class="cross">X</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- rwd顯示評論 -->
+                <div class="CommentBox2">
+                    <p class="describeTitle">評論紀錄</p><hr class="colorful">
+                    <div class="showComment">
+                        <div class="showHead">
+                            <img src="assets/img/member.png" alt="memberImg" class="CommentHead">
+                        </div>
+                        <div class="insideComment">
+                            <div class="words">
+                                <p class="one">芒～果乾</p>
+                                <p class="two">很香很ㄕㄨㄚˋ嘴，整個停步下來，但有點甜</p>
+                                <p class="three">一週前</p>
+                            </div>
+                            <div class="star">
+                                <p class="four">★★★☆☆</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showComment">
+                        <div class="showHead">
+                            <img src="assets/img/member.png" alt="memberImg" class="CommentHead">
+                        </div>
+                        <div class="insideComment">
+                            <div class="words">
+                                <p class="one">超級香甜芒果乾</p>
+                                <p class="two">吃得出來是很新鮮酸甜的芒果，螞蟻人的最愛！</p>
+                                <p class="three">三週前</p>
+                            </div>
+                            <div class="star">
+                                <p class="four">★★★★☆</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="showComment">
+                        <div class="showHead">
+                            <img src="assets/img/member.png" alt="memberImg" class="CommentHead">
+                        </div>
+                        <div class="insideComment">
+                            <div class="words">
+                                <p class="one">愛文芒果做的芒果乾</p>
+                                <p class="two">有一種愛文芒果味</p>
+                                <p class="three">兩月前</p>
+                            </div>
+                            <div class="star">
+                                <p class="four">★★★★☆</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 結束 -->
+                
+                <div class="WriteBox">
+                    <p class="describeTitle">我要評論</p><hr class="colorful">
+                    <div class="WriteComment">
+                        <form action="">
+                            <input id="title" type="text" name="title" placeholder="給它個標題吧！"><br>
+                            <p>寫下你的想法：</p><textarea id="content" name="" placeholder=""></textarea>
+                            <div class="starPoint" name="starPoint">
+                                <input type="radio" name="star" id="star1"><label for="star1"></label>
+                                <input type="radio" name="star" id="star2"><label for="star2"></label>
+                                <input type="radio" name="star" id="star3"><label for="star3"></label>
+                                <input type="radio" name="star" id="star4"><label for="star4"></label>
+                                <input type="radio" name="star" id="star5"><label for="star5"></label>
+                            </div>
+                            <button class="commentBt" type="submit">送出</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <div class="left">
+                <p><span class="title">聯絡資訊</span></p>
+                <p><span class="content">信箱：<a href="mailto:sundi224@gmail.com" style="color: white;">sundi224@gmail.com</a></span></p>
+                <p><span class="title">營業時間</span></p>
+                <p><span class="content">Mon.-Fri. 09:00 ~ 12:00 / 13:00 ~ 18:00</span></p>
+            </div>
+            <div class="right">
+                <ul class="rr">
+                    <li><a href="we.html">關於我們</a></li>
+                    <li><a href="merchantlogin.html">賣家中心</a></li>
+                </ul>
+                <ul class="rl">
+                    <li><a href="service.html">服務條款</a></li>
+                    <li><a href="know.html">購買須知</a></li>
+                </ul>
+            </div>
+        </div>
+        <div style="text-align: center; padding-bottom: 10px; margin: 0;"  class="footer2">
+            <span class="title">Copyright © 2024 Sundi</span>
+        </div>
+        <!-- rwd footer -->
+        <div class="footer-min">
+            <div style="text-align: center; padding-bottom: 10px; margin: 0;">
+                <p><span class="title">聯絡資訊</span></p>
+                <p><span class="content">信箱：<a href="mailto:sundi224@gmail.com" style="color: white;">sundi224@gmail.com</a></span></p>
+                <p><span class="title">營業時間</span></p>
+                <p><span class="content">Mon.-Fri. 09:00 ~ 12:00 / 13:00 ~ 18:00</span></p>
+                <span class="title">Copyright © 2024 Sundi</span>
+            </div>
+        </div>
+        <!--  -->
+    </footer>
+    <div class="goUp" id="goUp">
+        <a href="#" class="gotop"><img src="assets/img/arrow-up.png" class="top"></a>
+    </div>
+    <script>
+        const goUpButton = document.getElementById('goUp');
+        console.log("Script is running!"); 
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > window.innerHeight * 0.05) {
+                goUpButton.style.display = 'block';
+            } else {
+                goUpButton.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="assets/Javascript/style.js"></script>
+    <script src="https://anijs.github.io/lib/anijs/anijs-min.js"></script> 
+    <script src="https://anijs.github.io/lib/anijs/helpers/dom/anijs-helper-dom-min.js"></script>
+    <script src="assets/Javascript/mango.js"></script>
+</body>
+</html>
